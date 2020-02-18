@@ -6,15 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>UCLA Single Sign-On</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/shibboleth-idp/css/ucla-logon.1.0.5.css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./ucla-logon.1.0.5.css">
   <script src="/shibboleth-idp/js/modernizr.custom.1.0.5.js"></script>
 </head>
 
 <body>
 
 
-  <header class="logo" role="banner"><img src="/shibboleth-idp/img/ucla-white.png" alt="UCLA"></header>
+  <header class="logo" role="banner"><img src="./img/ucla-white.png" alt="UCLA"></header>
 
 <section class="content" role="main">
   <form id="sso" role="form" action="/shibboleth-idp/profile/SAML2/Redirect/SSO?execution=e2s2" method="post" data-abide novalidate>
@@ -52,8 +52,19 @@
 	  	<p><a href="/shibboleth-idp/profile/SAML2/Redirect/SSO?execution=e2s2&_eventId_authn/Medcenter=go" id="medcenter" onclick="setPrefCookie('Medcenter');">Sign in with your Mednet username and password</a></p>
 		</aside>
 
-	</form>
+    
 
+	</form>
+  <aside class="sp-support">
+      <h2>You're Signing Into Common Collaboration and Learning Environment (CCLE)</h2>
+  
+  
+        <a href="https://ccle.ucla.edu/login/ucla_login.php?loginguest=1">Guest Access</a> - access to publicly viewable sites<br />
+        <a href="https://ccle.ucla.edu/login/ucla_login.php">Special Case Login</a> -  only if you have been assigned a special case ID<br />
+        Getting an error after a successful login? Your Logon ID might not be <a href="http://kb.ucla.edu/articles/moodle-needs-certain-shibboleth-attributes">working properly</a>.
+      
+
+  </aside>
 
 </section>
 

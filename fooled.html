@@ -21,6 +21,16 @@
 		margin-bottom: 30px;
 		width: 500px;
 	}
+	.evidence {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.evidence img {
+		width: 80%;
+		margin: 20px;
+	}
 </style>
 <script>
 	var urlParams = new URLSearchParams(window.location.search);
@@ -41,7 +51,7 @@
 	<div class="wrapper">
 		<h1>CS 88SA: Week 6 Hacking & Security</h1>
 		<img style="width: 300px" src="./img/clicked.jpeg" />
-		<h1>Uh oh!</h1>
+		<h1>You've been phished!</h1>
 		<div>
 			<p><strong>Username: </strong><span id="user"></span></p>
 			<p><strong>Password: </strong><span id="pass"></span></p>
@@ -51,6 +61,12 @@
 		<p>Lucky for you, I haven't actually stored any of your data. This constitues our first lesson on security:
 		</p></div>
 		<img style="width: 300px" src="./img/phished.jpeg" />
+
+		<div class="evidence">
+			<img src="./img/1.png" />
+			<img src="./img/2.png" />
+			<img src="./img/3.png" />
+		</div>
 	</div>
 </body>
 </html>

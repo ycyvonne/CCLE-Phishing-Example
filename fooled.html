@@ -3,33 +3,54 @@
 <head>
 	<title>You've been phished!</title>
 <style>
+	* {
+		font-family: Roboto, sans-serif;
+	}
 	.wrapper {
 		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		margin-bottom: 100px;
 	}
 	p {
 		text-align: center;
 	}
 	.text-wrapper {
 		margin-bottom: 30px;
+		width: 500px;
 	}
 </style>
+<script>
+	var urlParams = new URLSearchParams(window.location.search);
+	var username = urlParams.get('j_username');
+	var pass = urlParams.get('j_password');
+
+	window.addEventListener('load', function () {
+	  	if (username) {
+			document.querySelector('#user').innerHTML = username;
+		}
+		if (pass) {
+			document.querySelector('#pass').innerHTML = pass;
+		}
+	});
+</script>
 </head>
 <body>
-
 	<div class="wrapper">
-		<p>CS88SA: Week 6 Hacking & Security</p>
+		<h1>CS 88SA: Week 6 Hacking & Security</h1>
 		<img style="width: 300px" src="./img/clicked.jpeg" />
 		<h1>Uh oh!</h1>
+		<div>
+			<p><strong>Username: </strong><span id="user"></span></p>
+			<p><strong>Password: </strong><span id="pass"></span></p>
+		</div>
 		<div class="text-wrapper">
 		<p>You just gave your UCLA username and password to me! I can now access your MyUCLA, drop all of your classes, report non-attendance, all sorts of terrible things.</p>
-		<p>Lucky for you, I haven't actually stored the password. This constitues our first lesson on security:
+		<p>Lucky for you, I haven't actually stored any of your data. This constitues our first lesson on security:
 		</p></div>
 		<img style="width: 300px" src="./img/phished.jpeg" />
-
 	</div>
 </body>
 </html>
